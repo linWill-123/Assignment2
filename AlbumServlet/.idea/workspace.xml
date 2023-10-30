@@ -10,22 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7f90177-e1ed-49cc-be59-86cd1d62ac96" name="Changes" comment="added copy of java server AlbumServlet to A2">
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/src/main/java/CSVParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/src/main/java/ClientPart2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/src/main/java/DefaultAPIPostExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/src/main/java/DefaultApiExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/src/main/java/RunningThreads.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java-client-generated/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClientPart2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ClientPart2/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +157,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698689890109</updated>
-      <workItem from="1698689891198" duration="2181000" />
+      <workItem from="1698689891198" duration="2919000" />
     </task>
     <task id="LOCAL-00001" summary="added copy of java server AlbumServlet to A2">
       <option name="closed" value="true" />
