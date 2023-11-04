@@ -18,7 +18,8 @@ public class AlbumIdServlet extends HttpServlet {
       String albumID = pathInfo.substring(1);
       /*For this assignment, just by default retrieve predefined data in AlbumStore, since we don't actually
        store the POST data into AlbumStore*/
-      Album album = AlbumStore.getAlbum("1"); // Default id with 1 retrieved
+
+      Album album = DynamoDbTableManager.getAlbum(albumID);
 
       // If we can find an album with the given ID
       if (album != null) {

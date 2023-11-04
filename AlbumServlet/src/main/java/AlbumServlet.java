@@ -10,10 +10,36 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import org.apache.commons.io.IOUtils;
+import software.amazon.awssdk.auth.credentials.AwsCredentials;
+import software.amazon.awssdk.auth.credentials.AwsCredentialsProvider;
+import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider;
+import software.amazon.awssdk.core.exception.SdkClientException;
+import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedClient;
+import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
 
 @WebServlet(name = "AlbumServlet", value = "/albums")
 @MultipartConfig
 public class AlbumServlet extends HttpServlet {
+
+  @Override
+  public void init(ServletConfig config) throws ServletException {
+    super.init(config);
+
+//    try {
+//      AwsCredentialsProvider credentialsProvider = DefaultCredentialsProvider.create();
+//      AwsCredentials credentials = credentialsProvider.resolveCredentials();
+//      System.out.println("Access Key ID: " + credentials.accessKeyId());
+//      // Do not print the secret access key or session token in a real-world application
+//    } catch (SdkClientException e) {
+//      e.printStackTrace();
+//    }
+
+//    // Perform initialization here
+    DynamoDbClient dynamoDbClient = DynamoDbClientProvider.getDynamoDbClient();
+    DynamoDbEnhancedClient enhancedClient = DynamoDbClientProvider.getEnhancedClient();
+
+  }
+
   @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
@@ -24,6 +50,7 @@ public class AlbumServlet extends HttpServlet {
       response.getWriter().write("Invalid content type");
       return;
     }
+
 
     byte[] image = null;
     Profile profile = null;
@@ -48,7 +75,6 @@ public class AlbumServlet extends HttpServlet {
         byte[] input = new byte[(int) profilePart.getSize()];
         profilePart.getInputStream().read(input);
         String profileContent = new String(input, StandardCharsets.UTF_8);
-//        System.out.println(profileContent);
           JsonObject profileJson =  JsonParser.parseString(profileContent).getAsJsonObject();
           profile = new Profile(
               profileJson.get("artist").getAsString(),
@@ -68,21 +94,14 @@ public class AlbumServlet extends HttpServlet {
     String albumID = UUID.randomUUID().toString();
     Album album = new Album(albumID, profile, image);
 
+
     // Output response with album key
     JsonObject jsonResponse = new JsonObject();
+    DynamoDbTableManager.putAlbum(album);
 
     jsonResponse.addProperty("albumID",albumID);
     jsonResponse.addProperty("imageSize", String.valueOf(image.length));
     // Convert JsonObject to String and write to response
     response.getWriter().write(jsonResponse.toString());
-  }
-
-  private String cleanProfileString(String profileContent) {
-    profileContent = profileContent.replace("class AlbumsProfile {", "{");
-    profileContent = profileContent.replace("artist: ", "\"artist\": \"");
-    profileContent = profileContent.replace("\n    ,\"title\": ", "\",\"title\": \"");
-    profileContent = profileContent.replace("\n    ,\"year\": ", "\",\"year\": \"");
-    profileContent = profileContent.replace("\n}", "\"}");
-    return profileContent;
   }
 }

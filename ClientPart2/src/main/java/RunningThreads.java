@@ -12,6 +12,8 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -22,7 +24,7 @@ public class RunningThreads {
   private static AtomicInteger failure = new AtomicInteger(0);
 
   private static final int BATCH_SIZE = 1000;
-  private static List<String> logBatch = Collections.synchronizedList(new ArrayList<String>());
+  private static Queue<String> logBatch = new ConcurrentLinkedQueue<>();
 
   private static long wallTime;
   private static long testStartTime;
@@ -41,7 +43,7 @@ public class RunningThreads {
     executorService.shutdown();
     executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS);
 
-    executorService = Executors.newFixedThreadPool(threadGroupSize);
+    executorService = Executors.newFixedThreadPool(threadGroupSize*numThreadGroups);
     testStartTime = System.currentTimeMillis();
 
     for (int group = 0; group < numThreadGroups; group++) {
@@ -50,6 +52,8 @@ public class RunningThreads {
       }
       Thread.sleep(delaySeconds * 1000);
     }
+
+    writeBatchToFile(filePath);
 
     executorService.shutdown();
     executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS);
@@ -110,7 +114,7 @@ public class RunningThreads {
         int localSuccess = 0;
         int localFailure = 0;
 
-        File image = new File("/Users/willxzy/Downloads/Assignment1.Problem1.jpg");
+        File image = new File("/Users/willxzy/Downloads/MicrosoftTeams-image.png");
         AlbumsProfile profile = new AlbumsProfile();
         profile.setArtist("Eminem");
         profile.setTitle("MMlp2");
@@ -168,20 +172,24 @@ public class RunningThreads {
     });
   }
 
-  private synchronized static void appendToCSV(String filename, long startTime, String requestType, long latency, int responseCode) {
+  private static void appendToCSV(String filename, long startTime, String requestType, long latency, int responseCode) {
     logBatch.add(startTime + "," + requestType + "," + latency + "," + responseCode);
 
-    if (logBatch.size() >= BATCH_SIZE) {
-      writeBatchToFile(filename);
-      logBatch.clear();
-    }
+//    if (logBatch.size() >= BATCH_SIZE) {
+//      writeBatchToFile(filename);
+//    }
   }
 
-  private synchronized static void writeBatchToFile(String filename) {
+  private static void writeBatchToFile(String filename) {
+    List<String> batchToWrite = new ArrayList<>();
+    while (!logBatch.isEmpty()) {
+      batchToWrite.add(logBatch.poll());
+    }
+
     try (FileWriter fw = new FileWriter(filename, true);
-        BufferedWriter bw = new BufferedWriter(fw);
-        PrintWriter out = new PrintWriter(bw)) {
-      for (String log : logBatch) {
+         BufferedWriter bw = new BufferedWriter(fw);
+         PrintWriter out = new PrintWriter(bw)) {
+      for (String log : batchToWrite) {
         out.println(log);
       }
     } catch (IOException e) {

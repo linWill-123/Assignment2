@@ -9,15 +9,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7f90177-e1ed-49cc-be59-86cd1d62ac96" name="Changes" comment="added copy of java server AlbumServlet to A2">
-      <change afterPath="$PROJECT_DIR$/../java-client-generated/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="f7f90177-e1ed-49cc-be59-86cd1d62ac96" name="Changes" comment="change to workspace.xml">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/AlbumRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DynamoDbClientProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DynamoDbTableManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DynamoDbTableProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ClientPart2/MicrosoftTeams-image.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/AlbumServlet_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/AlbumServlet_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/Album.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/Album.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumIdServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumIdServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/Profile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AlbumIdServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AlbumIdServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AlbumServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AlbumServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClientPart2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ClientPart2/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ClientPart2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ClientPart2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClientPart2/file-java-task1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClientPart2/src/main/java/ClientPart2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ClientPart2/src/main/java/ClientPart2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClientPart2/src/main/java/RunningThreads.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ClientPart2/src/main/java/RunningThreads.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -29,9 +57,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2XUi7AjaFEuw5ihNzM7OdhdH5wX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -44,14 +72,16 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/willxzy/Desktop/NEU/CS6650/Assignment2/AlbumServlet/src/main/java",
+    "last_opened_file_path": "/Users/willxzy/Desktop/NEU/CS6650/Assignment2/AlbumServlet",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -148,6 +178,37 @@
         </option>
       </method>
     </configuration>
+    <configuration default="true" type="aws.lambda" factoryName="Local">
+      <option name="credentialProviderId" />
+      <option name="regionId" />
+      <option name="debugHost" value="localhost" />
+      <option name="architecture" />
+      <option name="environmentVariables">
+        <map />
+      </option>
+      <option name="handler" />
+      <option name="image" value="false" />
+      <option name="logicalFunctionName" />
+      <option name="memorySize" value="128" />
+      <option name="pathMappings">
+        <list />
+      </option>
+      <option name="platform" />
+      <option name="runtime" />
+      <option name="templateFile" />
+      <option name="timeout" value="300" />
+      <option name="useTemplate" value="false" />
+      <option name="input" />
+      <option name="inputIsFile" value="false" />
+      <sam>
+        <option name="additionalBuildArgs" />
+        <option name="additionalLocalArgs" />
+        <option name="buildInContainer" value="false" />
+        <option name="dockerNetwork" />
+        <option name="skipImagePull" value="false" />
+      </sam>
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -157,7 +218,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698689890109</updated>
-      <workItem from="1698689891198" duration="2919000" />
+      <workItem from="1698689891198" duration="42200000" />
+      <workItem from="1698986357180" duration="1357000" />
+      <workItem from="1699039164969" duration="6403000" />
     </task>
     <task id="LOCAL-00001" summary="added copy of java server AlbumServlet to A2">
       <option name="closed" value="true" />
@@ -167,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698691571451</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="change to workspace.xml">
+      <option name="closed" value="true" />
+      <created>1698692995789</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698692995789</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +246,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added copy of java server AlbumServlet to A2" />
-    <option name="LAST_COMMIT_MESSAGE" value="added copy of java server AlbumServlet to A2" />
+    <MESSAGE value="change to workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="change to workspace.xml" />
   </component>
 </project>
