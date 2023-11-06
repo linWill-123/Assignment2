@@ -1,43 +1,28 @@
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.google.gson.Gson;
-import com.google.gson.JsonSyntaxException;
-import java.io.InputStream;
+
 import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import org.apache.commons.io.IOUtils;
-import software.amazon.awssdk.auth.credentials.AwsCredentials;
-import software.amazon.awssdk.auth.credentials.AwsCredentialsProvider;
-import software.amazon.awssdk.auth.credentials.DefaultCredentialsProvider;
-import software.amazon.awssdk.core.exception.SdkClientException;
-import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedClient;
-import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
+
+import db.DynamoDbTableManager;
+import model.Album;
+import model.Profile;
 
 @WebServlet(name = "AlbumServlet", value = "/albums")
-@MultipartConfig
+@MultipartConfig(
+        fileSizeThreshold = 1024*1024*10,
+        maxFileSize = 1024*1024*50,
+        maxRequestSize = 1024*1024*100
+)
 public class AlbumServlet extends HttpServlet {
-
   @Override
-  public void init(ServletConfig config) throws ServletException {
-    super.init(config);
-
-//    try {
-//      AwsCredentialsProvider credentialsProvider = DefaultCredentialsProvider.create();
-//      AwsCredentials credentials = credentialsProvider.resolveCredentials();
-//      System.out.println("Access Key ID: " + credentials.accessKeyId());
-//      // Do not print the secret access key or session token in a real-world application
-//    } catch (SdkClientException e) {
-//      e.printStackTrace();
-//    }
-
-//    // Perform initialization here
-    DynamoDbClient dynamoDbClient = DynamoDbClientProvider.getDynamoDbClient();
-    DynamoDbEnhancedClient enhancedClient = DynamoDbClientProvider.getEnhancedClient();
-
+  public void init() throws ServletException {
+    super.init();
+    DynamoDbTableManager.initializeDbTable();
   }
 
   @Override

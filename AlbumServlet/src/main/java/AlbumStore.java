@@ -1,4 +1,6 @@
-import java.io.File;
+import model.Album;
+import model.Profile;
+
 import java.util.HashMap;
 import java.util.Map;
 

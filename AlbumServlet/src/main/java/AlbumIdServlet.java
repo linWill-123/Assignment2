@@ -1,4 +1,7 @@
 import com.google.gson.JsonObject;
+import db.DynamoDbTableManager;
+import model.Album;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -6,7 +9,11 @@ import java.io.IOException;
 
 @WebServlet(name = "AlbumIdServlet", value = "/albums/*")
 public class AlbumIdServlet extends HttpServlet {
-
+  @Override
+  public void init() throws ServletException {
+    super.init();
+    DynamoDbTableManager.initializeDbTable();
+  }
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
@@ -36,7 +43,7 @@ public class AlbumIdServlet extends HttpServlet {
       } else {
         // If we cannot find album with given ID
         response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-        response.getWriter().write("Album not found");
+        response.getWriter().write("model.Album not found");
       }
     } else {
       response.setStatus(HttpServletResponse.SC_BAD_REQUEST);

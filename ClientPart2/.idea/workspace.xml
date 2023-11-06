@@ -4,36 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e25ef80-bda9-49ee-9c49-5d1066471ef7" name="Changes" comment="Add copy of java client sdk to Assignment2">
-      <change afterPath="$PROJECT_DIR$/../AlbumServlet/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AlbumServlet/src/main/java/AlbumRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AlbumServlet/src/main/java/DynamoDbClientProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AlbumServlet/src/main/java/DynamoDbTableManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../AlbumServlet/src/main/java/DynamoDbTableProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MicrosoftTeams-image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlbumServlet/.idea/artifacts/AlbumServlet_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/.idea/artifacts/AlbumServlet_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlbumServlet/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="5e25ef80-bda9-49ee-9c49-5d1066471ef7" name="Changes" comment="Rewrite the RunningThreads by breaking it into simpler classes">
+      <change afterPath="$PROJECT_DIR$/../AlbumServlet/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AlbumServlet/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ConsumerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlbumServlet/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/.idea/aws.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AlbumServlet/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlbumServlet/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/Album.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/Album.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlbumServlet/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/Album.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../AlbumServlet/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumIdServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumIdServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AlbumServlet/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AlbumServlet/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumStore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlbumServlet/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/Profile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlbumServlet/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlbumServlet/src/main/java/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/src/main/java/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlbumServlet/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/Profile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlbumServlet/src/main/java/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/src/main/java/model/Album.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../AlbumServlet/src/main/java/AlbumIdServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/src/main/java/AlbumIdServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlbumServlet/src/main/java/AlbumRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../AlbumServlet/src/main/java/AlbumServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/src/main/java/AlbumServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AlbumServlet/src/main/java/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/src/main/java/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlbumServlet/src/main/java/AlbumStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/src/main/java/AlbumStore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlbumServlet/src/main/java/DynamoDbClientProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlbumServlet/src/main/java/DynamoDbTableManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/src/main/java/db/DynamoDbTableManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlbumServlet/src/main/java/DynamoDbTableProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AlbumServlet/src/main/java/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AlbumServlet/src/main/java/model/Profile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-java-task1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ClientPart2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ClientPart2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProducerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProducerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RunningThreads.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RunningThreads.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ThreadsRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ThreadsRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -61,9 +69,9 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3632184&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -85,7 +93,12 @@
       <workItem from="1698693036010" duration="5000" />
       <workItem from="1698867946698" duration="2094000" />
       <workItem from="1698958301117" duration="10736000" />
-      <workItem from="1698986354906" duration="19091000" />
+      <workItem from="1698986354906" duration="30535000" />
+      <workItem from="1699127198912" duration="14637000" />
+      <workItem from="1699145370478" duration="8584000" />
+      <workItem from="1699210331058" duration="734000" />
+      <workItem from="1699219813762" duration="11000" />
+      <workItem from="1699242710351" duration="468000" />
     </task>
     <task id="LOCAL-00001" summary="Added copy of ClientPart2 to A2">
       <option name="closed" value="true" />
@@ -111,7 +124,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698692843418</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix typo of executorService's fixedThreadPool size">
+      <option name="closed" value="true" />
+      <created>1699066502984</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699066502984</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Rewrite the RunningThreads by breaking it into simpler classes">
+      <option name="closed" value="true" />
+      <created>1699141553718</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699141553718</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +150,8 @@
     <MESSAGE value="Added copy of ClientPart2 to A2" />
     <MESSAGE value="track unversioned gson jar file in AlbumServlet" />
     <MESSAGE value="Add copy of java client sdk to Assignment2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add copy of java client sdk to Assignment2" />
+    <MESSAGE value="fix typo of executorService's fixedThreadPool size" />
+    <MESSAGE value="Rewrite the RunningThreads by breaking it into simpler classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rewrite the RunningThreads by breaking it into simpler classes" />
   </component>
 </project>

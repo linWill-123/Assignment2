@@ -53,10 +53,10 @@ public class RunningThreads {
       Thread.sleep(delaySeconds * 1000);
     }
 
-    writeBatchToFile(filePath);
-
     executorService.shutdown();
     executorService.awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS);
+
+    writeBatchToFile(filePath);
 
     testEndTime = System.currentTimeMillis();
     wallTime = (testEndTime - testStartTime) / 1000;
@@ -67,7 +67,7 @@ public class RunningThreads {
     System.out.println("Successful Requests: " + success);
     System.out.println("Failed Requests: " + failure);
 
-    List<Long> latencies = new ArrayList<>();
+    List<Long> latencies;
     latencies = CSVParser.parseLatenciesForSuccessfulRequests(filePath); // Parse latency information from csv
     Collections.sort(latencies);
     // Mean
@@ -125,8 +125,8 @@ public class RunningThreads {
           long endTimestamp;
           long latency;
 
-          // POST latency calculation
           startTimestamp = System.currentTimeMillis();
+          // POST latency calculation
           try {
             ImageMetaData postResponse = apiInstance.newAlbum(image, profile); // Call Get
             endTimestamp = System.currentTimeMillis();
@@ -140,15 +140,15 @@ public class RunningThreads {
             endTimestamp = System.currentTimeMillis();
             latency = endTimestamp - startTimestamp;
             appendToCSV(filePath, startTimestamp, "POST", latency, e.getCode());
-            System.err.println("Exception when calling DefaultApi");
+            System.err.println(e.getMessage());
             // Update Failure Count
             localFailure++;
           }
 
           // GET latency calculation
           try {
-            startTimestamp = System.currentTimeMillis();
             String albumID = "1"; // hardcoded albumID, GET returns pre-existing data, so albumID doesn't matter
+            startTimestamp = System.currentTimeMillis();
             AlbumInfo getResponse = apiInstance.getAlbumByKey(albumID); // Call GET
             endTimestamp = System.currentTimeMillis();
             latency = endTimestamp - startTimestamp;
@@ -160,7 +160,7 @@ public class RunningThreads {
             endTimestamp = System.currentTimeMillis();
             latency = endTimestamp - startTimestamp;
             appendToCSV(filePath, startTimestamp, "GET", latency, e.getCode());
-            System.err.println("Exception when calling DefaultApi");
+            System.err.println(e.getMessage());
             // Update Failure Count
             localFailure++;
           }
