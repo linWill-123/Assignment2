@@ -40,8 +40,10 @@ public class ProducerThread implements Callable<LogResult> {
         profile.setYear("2001");
 
         for (int i = 0; i < numIterations; i++) {
-            doPost(image, profile);
-            doGet("1");
+            ImageMetaData postResponse = doPost(image, profile);
+            if (postResponse != null) {
+                doGet(postResponse.getAlbumID());
+            }
         }
 
         latch.countDown();
@@ -52,17 +54,19 @@ public class ProducerThread implements Callable<LogResult> {
         return new LogResult(numSuccess, numFailure, logEntries);
     }
 
-    public void doPost(File image, AlbumsProfile profile) {
+    public ImageMetaData doPost(File image, AlbumsProfile profile) {
         boolean success = false;
         int attempts = 0;
         long latency;
         long startTimestamp;
 
+        ImageMetaData postResponse = null;
+
         while (!success && attempts < 5) {
             attempts++;
             startTimestamp = System.currentTimeMillis();
             try {
-                ImageMetaData postResponse = apiInstance.newAlbum(image, profile);
+                postResponse = apiInstance.newAlbum(image, profile);
                 latency = System.currentTimeMillis() - startTimestamp;
                 logEntries.add(startTimestamp + "," + "POST" + "," + latency + "," + 200);
                 numSuccess++;
@@ -76,6 +80,8 @@ public class ProducerThread implements Callable<LogResult> {
                 }
             }
         }
+
+        return postResponse;
     }
 
     public void doGet(String albumId) {
