@@ -3,7 +3,6 @@ package model;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbAttribute;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 
-@DynamoDbBean
 public class Profile {
   private String artist;
   private String title;
@@ -18,17 +17,17 @@ public class Profile {
     this.title = title;
     this.year = year;
   }
-  @DynamoDbAttribute("Artist")
+
   public String getArtist() {
     return artist;
   }
 
-  @DynamoDbAttribute("Title")
+
   public String getTitle() {
     return title;
   }
 
-  @DynamoDbAttribute("Year")
+
   public String getYear() {
     return year;
   }

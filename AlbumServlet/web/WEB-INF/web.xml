@@ -24,8 +24,14 @@
         <servlet-name>AlbumIdServlet</servlet-name>
         <servlet-class>AlbumIdServlet</servlet-class>
     </servlet>
+
     <servlet-mapping>
         <servlet-name>AlbumIdServlet</servlet-name>
         <url-pattern>/albums/*</url-pattern>
     </servlet-mapping>
+
+    <!--  Context  -->
+    <listener>
+        <listener-class>AppContextListener</listener-class>
+    </listener>
 </web-app>

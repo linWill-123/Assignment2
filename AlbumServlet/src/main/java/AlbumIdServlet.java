@@ -10,11 +10,6 @@ import java.io.IOException;
 @WebServlet(name = "AlbumIdServlet", value = "/albums/*")
 public class AlbumIdServlet extends HttpServlet {
   @Override
-  public void init() throws ServletException {
-    super.init();
-    DynamoDbTableManager.initializeDbTable();
-  }
-  @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
     // Get url parameter information

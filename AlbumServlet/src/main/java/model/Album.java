@@ -3,7 +3,6 @@ package model;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
 
-@DynamoDbBean
 public class Album {
   private String id;
   private Profile profile;
@@ -17,7 +16,6 @@ public class Album {
     this.image = image;
   }
 
-  @DynamoDbPartitionKey
   public String getId() { return this.id; }
 
   public Profile getProfile() {

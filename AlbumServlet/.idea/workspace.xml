@@ -10,31 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7f90177-e1ed-49cc-be59-86cd1d62ac96" name="Changes" comment="change to workspace.xml">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ClientPart2/src/main/java/ConsumerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/AppContextListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ClientPart2/urls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/Album.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumIdServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumIdServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/AlbumStore.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/AlbumServlet_war_exploded/WEB-INF/classes/Profile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AlbumIdServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AlbumIdServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AlbumRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AlbumServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AlbumServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AlbumStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AlbumStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DynamoDbClientProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DynamoDbTableManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/DynamoDbTableManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DynamoDbTableProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/db/DynamoDbTableManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/DynamoDbTableManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ClientPart2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ClientPart2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ClientPart2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ClientPart2/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ClientPart2/src/main/java/ClientPart2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ClientPart2/src/main/java/ClientPart2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClientPart2/src/main/java/DefaultAPIPostExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ClientPart2/src/main/java/DefaultAPIPostExample.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ClientPart2/src/main/java/ProducerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ClientPart2/src/main/java/ProducerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ClientPart2/src/main/java/RunningThreads.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ClientPart2/src/main/java/RunningThreads.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ClientPart2/src/main/java/ThreadsRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ClientPart2/src/main/java/ThreadsRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClientPart2/src/main/java/RunningThreads.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +36,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -72,6 +65,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/willxzy/Desktop/NEU/CS6650/Assignment2/AlbumServlet&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -89,6 +84,12 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="model" />
     </key>
   </component>
   <component name="RunManager">
@@ -193,6 +194,10 @@
       <workItem from="1699039164969" duration="9698000" />
       <workItem from="1699132939439" duration="92000" />
       <workItem from="1699146604334" duration="9855000" />
+      <workItem from="1699294857358" duration="1260000" />
+      <workItem from="1699318076074" duration="16730000" />
+      <workItem from="1699402288879" duration="5033000" />
+      <workItem from="1699427111662" duration="13073000" />
     </task>
     <task id="LOCAL-00001" summary="added copy of java server AlbumServlet to A2">
       <option name="closed" value="true" />
